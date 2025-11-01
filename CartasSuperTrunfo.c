@@ -4,11 +4,11 @@
 int main() {
     char estado1[3], codCarta1[4], nomeCidade1[50];
     int populacao1, pontosTuristicos1;
-    float area1, pib1, densidade1, pibPerCapita1;
+    float area1, pib1, densidade1, pibPerCapita1, superPoder1;
 
     char estado2[3], codCarta2[4], nomeCidade2[50];
     int populacao2, pontosTuristicos2;
-    float area2, pib2, densidade2, pibPerCapita2;
+    float area2, pib2, densidade2, pibPerCapita2, superPoder2;
     
     
 //Entrada de dados da carta 1
@@ -59,12 +59,17 @@ int main() {
     printf("Digite a quantidade de pontos turisticos: ");
     scanf("%d", &pontosTuristicos2);
     
-    // Cálculos
+// Cálculos densidade e Pib Percapita
     densidade1 = populacao1 / area1;
     densidade2 = populacao2 / area2;
 
     pibPerCapita1 = pib1 / populacao1;
     pibPerCapita2 = pib2 / populacao2;
+
+
+// Super Poder = soma de todos os atributos numéricos
+    superPoder1 = populacao1 + area1 + pib1 + pibPerCapita1 + densidade1 + pontosTuristicos1;
+    superPoder2 = populacao2 + area2 + pib2 + pibPerCapita2 + densidade2 + pontosTuristicos2;
 
 
     printf("\n====SUPER TRUNFO====\n");
@@ -77,7 +82,7 @@ int main() {
     printf("Pontos turísticos: %d\n", pontosTuristicos1);
     printf("Densidade populacional: %.2f hab/km²\n", densidade1);
     printf("PIB per capita: %.2f\n", pibPerCapita1);
-
+    printf("Super Poder: %.2f\n", superPoder1);
 //Exibição dos dados da carta 2    
     printf("\nCidade 2: %s (%s)\n", nomeCidade2, estado2);
     printf("Código: %s\n", codCarta2);
@@ -87,7 +92,7 @@ int main() {
     printf("Pontos turísticos: %d\n", pontosTuristicos2);
     printf("Densidade populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per capita: %.2f\n", pibPerCapita2);
-
+    printf("Super Poder: %.2f\n", superPoder2);
 //Comparações 
     printf("\n=== COMPARAÇÃO ENTRE AS CARTAS ===\n");
 
@@ -97,7 +102,7 @@ int main() {
     printf("Maior PIB per capita: %s\n", (pibPerCapita1 > pibPerCapita2) ? nomeCidade1 : nomeCidade2);
     printf("Maior densidade populacional: %s\n", (densidade1 > densidade2) ? nomeCidade1 : nomeCidade2);
     printf("Mais pontos turísticos: %s\n", (pontosTuristicos1 > pontosTuristicos2) ? nomeCidade1 : nomeCidade2);
-
+    printf("Maior Super Poder: %s \n", (superPoder1 > superPoder2) ? nomeCidade1 : nomeCidade2);
 
 
 //Comentários sobre os termos utilizados no código
