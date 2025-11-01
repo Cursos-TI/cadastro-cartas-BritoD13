@@ -111,4 +111,3 @@ int main() {
     printf("\nEncerrando o jogo... Ate a proxima!\n");
     return 0;
 }
-1
