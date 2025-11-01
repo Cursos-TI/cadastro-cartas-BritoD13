@@ -115,7 +115,6 @@ int main() {
 //%f = formato para ponto flutuante
 //%s = formato para strings (sequência de caracteres)
 //%c = formato para caractere único
-//struct = palavra reservada para definir uma estrutura de dados
 //printf = função para imprimir dados na tela
 //scanf = função para ler dados da entrada padrão (teclado)
 //include = diretiva para incluir bibliotecas padrão
